@@ -11,6 +11,8 @@ digraph gap {
   A [label=<<b>does the product expand the market?</b><br/><font point-size="11" color="#55575F">the assumption that explains the gap</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   T -> S -> D;
   T -> X -> G;
-  A -> S [style=dashed, label=" no"];
+  // A sits between S and X in one column, so neither dashed edge crosses a solid one.
+  {rank=same; S; A; X}
+  S -> A [dir=back, style=dashed, label=" no"];
   A -> X [style=dashed, label=" yes"];
 }
