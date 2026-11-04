@@ -25,3 +25,38 @@ path = "checks/local"
 question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
 file = ""
 answer = "It stays: `checks/local` is the folder the extension contract names for a repository's own code, and it holds the program and the fictional input it runs on, which change together."
+
+[[answer]]
+check = "logical-lines"
+path = "evidence/market-structure/protocol.md"
+question = "108 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "d65e72476b7d"
+answer = "Its role in one sentence: it records how the pool was built, from the strings to the stopping rule, so that a reader can run the search again; its tables of strings are data, and it stays whole under `Protocol`."
+
+[[answer]]
+check = "document-mode"
+path = "README.md"
+question = "reads about equally as reference and explanation: one mode per document?"
+file = "0ac39d3b9fff"
+answer = "One mode, to look up: this front page states what the repository covers, what the review found and the baseline, and the findings are claims to consult; `Scope` heads it."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/market-structure/position.md"
+question = "reads about equally as explanation and reference: one mode per document?"
+file = "aa0723360511"
+answer = "One mode, to understand: it says where the review ends and the work begins, and its `The questions` table summarises answers the other files back."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/market-structure/state-of-the-art.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "c4af1453473f"
+answer = "One mode, reference: each question has a table of records to look up, with no step to follow; the headings `Q1` to `Q4` name them."
+
+[[answer]]
+check = "name-content"
+path = "evidence/market-structure/state-of-the-art.md"
+question = "the name 'state' and the opening are far apart in meaning (0.01): does the name predict the content?"
+file = "c4af1453473f"
+answer = "Yes: the name is the review genre's name for step 3, `State of the art`, and the opening says what it holds, the best evidence per question; the low similarity comes from the short name."

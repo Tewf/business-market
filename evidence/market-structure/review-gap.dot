@@ -1,0 +1,16 @@
+// One company sized two ways in 2014. Orange: a top-down chain. Green: the other chain. Blue: the assumption that explains the gap.
+digraph gap {
+  graph [rankdir=LR, nodesep=0.35, ranksep=0.8, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  T [label=<<b>taxi and limo revenue</b><br/><font point-size="11" color="#55575F">100 billion, summed by region</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  S [label=<<b>a 10% share</b><br/><font point-size="11" color="#55575F">assumed</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  D [label=<<b>10 billion</b><br/><font point-size="11" color="#55575F">the opportunity</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  X [label=<<b>3 to 6 times the taxi market</b><br/><font point-size="11" color="#55575F">plus 2.5% to 12.5% of car-ownership cost</font>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  G [label=<<b>450 billion to 1.3 trillion</b><br/><font point-size="11" color="#55575F">25 times the opportunity</font>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  A [label=<<b>does the product expand the market?</b><br/><font point-size="11" color="#55575F">the assumption that explains the gap</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  T -> S -> D;
+  T -> X -> G;
+  A -> S [style=dashed, label=" no"];
+  A -> X [style=dashed, label=" yes"];
+}
