@@ -1,0 +1,22 @@
+# A fictional market, to run the program on. No real person, firm or number: every value is a made-up input.
+# Every input is an interval and is tagged PROVISIONAL until someone measures it; then the tag goes and a source comes.
+currency = "EUR"
+
+[[segment]]
+name = "urban households"
+customers = { low = 40000, high = 90000, status = "PROVISIONAL" }     # households in the fictional region that could be reached
+adoption = { low = 0.01, high = 0.04, status = "PROVISIONAL" }        # share of reached households that buy at all
+frequency = { low = 2, high = 6, status = "PROVISIONAL" }             # purchases per buyer per year
+price = { low = 18, high = 35, status = "PROVISIONAL" }               # money per purchase
+
+[[segment]]
+name = "small offices"
+customers = { low = 3000, high = 8000, status = "PROVISIONAL" }
+adoption = { low = 0.02, high = 0.08, status = "PROVISIONAL" }
+frequency = { low = 4, high = 12, status = "PROVISIONAL" }
+price = { low = 40, high = 80, status = "PROVISIONAL" }
+
+[top_down]
+# A published figure for the whole category, and the share a newcomer could take of it.
+market = { low = 20000000, high = 45000000, status = "PROVISIONAL" }
+share = { low = 0.005, high = 0.03, status = "PROVISIONAL" }

@@ -18,3 +18,10 @@ path = "README.md"
 question = "reads about equally as explanation and reference: one mode per document?"
 file = "4cb58bd58f32"
 answer = "One mode, to look up: this front page states what the repository covers, and its steps and questions belong to that scope. `Scope` heads it."
+
+[[answer]]
+check = "tree-shape"
+path = "checks/local"
+question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "It stays: `checks/local` is the folder the extension contract names for a repository's own code, and it holds the program and the fictional input it runs on, which change together."
