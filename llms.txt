@@ -1,12 +1,16 @@
 # Market and competition
 
-> Market sizing, differentiation, competition, platforms and two-sided markets, and the economics of personalisation. Scope only; the review is not started.
+> Market sizing, differentiation, competition, platforms and two-sided markets, and the economics of personalisation, and a program that sizes a market bottom-up as an interval. First review written: market structure, ending on the baseline B1.
 
 Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
 
 ## The repository
 
-- [Market and competition](https://tewf.github.io/business-market/README.md): the scope, the first job and the questions its review must answer
+- [Market and competition](https://tewf.github.io/business-market/README.md): the scope, what the first review found, the baseline B1 and the questions it answered
+- [Evidence](https://tewf.github.io/business-market/evidence/README.md): the first review, on market structure, with the bibliography
+- [Market structure](https://tewf.github.io/business-market/evidence/market-structure/README.md): 40 sources in five steps, with the claims table and the named baseline
+- [Baseline](https://tewf.github.io/business-market/evidence/market-structure/baseline.md): B1, a market sized by two methods with intervals and a competition frame
+- [Bibliography](https://tewf.github.io/business-market/evidence/bibliography.md): every work cited, once
 - [Decisions](https://tewf.github.io/business-market/decisions/README.md): one record per choice that shapes the repository
 
 ## Contributing

@@ -7,9 +7,11 @@ La taille d'un marché, la différenciation, la concurrence, les plateformes et 
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-04) :** mis en place ; rien n'est encore écrit au-delà du périmètre. Le premier travail est une revue
-> de littérature, non commencée. Le nom est provisoire jusqu'à ce que la première étape de cette revue dise comment le
-> domaine nomme la chose. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
+> **État (2026-11-04) :** la première revue est écrite, en première passe de 40 sources, et finit sur une référence
+> nommée, B1. Un programme calcule une taille de marché ascendante sous forme d'intervalle, chaque entrée étant marquée
+> PROVISIONAL. Le nom est conservé après l'étape de cadrage
+> ([fiche 0002](decisions/0002-keep-the-name-and-size-a-market-by-two-methods.md)).
+> Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
@@ -60,6 +62,7 @@ digraph where_it_sits {
 | dedans | la différenciation, horizontale et verticale, et ce qu'un concurrent peut copier | une différence copiable est un délai, non un fossé |
 | dedans | la concurrence telle que l'économie industrielle l'énonce : entrée, rivaux et structure d'un marché | une entreprise entre sur un marché, et le domaine a un vocabulaire pour ce qu'elle y trouvera |
 | dedans | les plateformes et les marchés bifaces, d'après Rochet et Tirole | une plateforme fixe le prix de deux côtés à la fois, et une règle pour l'un peut casser l'autre |
+| dedans | un programme qui dimensionne un marché par le bas sous forme d'intervalle | une taille dont le doute n'est pas dit ne se compare à aucune autre |
 | dedans | l'économie de la personnalisation : ce que l'adaptation fait à la concurrence, aux coûts de changement et à la valeur des données | un bien personnalisé est un autre bien sur le marché, non une façon moins chère de vendre le même |
 | plus tard | un modèle d'un marché nommé avec des données réelles | il faut les données et un marché à nommer, et le squelette s'en tient à la méthode |
 | dehors | la demande estimée à partir des choix des clients | [business-customer](https://github.com/Tewf/business-customer) |
@@ -67,19 +70,32 @@ digraph where_it_sits {
 
 ## Le premier travail : une revue de littérature
 
-Non commencée. Elle suit l'ordre d'une revue de thèse, et elle est finie quand elle peut nommer la référence.
+Faite en première passe le 2026-11-04, en cinq étapes d'une revue de thèse : [evidence/market-structure](evidence/market-structure/README.md). Elle réunit 40 sources, 32 formelles et 8 grises, et la plupart des chiffres sont lus dans des résumés et marqués comme tels.
 
-1. **Cadrer :** le problème en une phrase, et comment chaque domaine le nomme. Pistes à vérifier : les manuels d'économie industrielle. Rochet et Tirole sur les marchés bifaces. L'économie de la personnalisation et de la production sur mesure en série. Les méthodes de taille de marché comme littérature grise notée selon les critères de Garousi 2019. Le dépôt peut être renommé alors.
-2. **Revue :** chaque nom, cherché par son nom académique, son acronyme et son auteur ; les synthèses d'abord.
-   - l'économie industrielle, d'un manuel actuel aux articles fondateurs, les synthèses d'abord ;
-   - les marchés bifaces, par leurs noms académiques et leurs auteurs, avec les modèles qui donnent une règle de prix ;
-   - la personnalisation comme force de marché, trouvée dans l'économie de la variété des produits et des données ;
-   - les méthodes de taille de marché comme littérature grise, chaque source notée, sous le seuil un simple exemple.
-3. **État de l'art, et le dossier contre.**
-4. **Positionnement :** ce que ce dépôt demande et que le domaine ne répond pas déjà.
-5. **Référence :** une taille de marché travaillée par deux méthodes sur un exemple posé, avec l'écart entre elles rapporté, comparée à un chiffre unique descendant, qui est la pratique.
+## Ce que la revue a trouvé
 
-## Questions auxquelles la revue doit répondre
+- **Les noms du domaine sont l'économie industrielle, pour la structure et l'entrée, et la prévision, pour la taille.** La pratique dit marché adressable total et fossé. Le nom « marché » correspond en partie et reste.
+- **Deux tailles d'une même entreprise tombent à 25 fois d'écart sur une seule prémisse.**
+  - Un article de 2014 additionne les recettes des taxis à 100 milliards et retient une part de 10 % : environ 10 milliards (Damodaran 2014, article lu).
+  - Un autre multiplie ce marché par 3 à 6 et ajoute une part du coût de possession d'une voiture : 450 milliards à 1,3 billion (Gurley 2014, article lu).
+  - La prémisse est de savoir si le produit agrandit le marché. Aucune étude reliant un écart à une vente ultérieure n'a été trouvée.
+  - Sur des séries de ventes, une répartition selon les proportions prévues et une combinaison optimale des niveaux battent les méthodes simples (Athanasopoulos 2009, secondaire).
+  - Un plafond ajusté sur des ventes précoces est biaisé (Van den Bulte 1997, secondaire), et les intervalles déclarés sont trop étroits (Soll 2004, secondaire).
+- **L'industrie explique une minorité de ce qui fait différer les rendements.** Environ 19 % de la variance tient à l'industrie et 32 % à l'activité dans un découpage (McGahan 1997, secondaire). Un autre trouve de petits effets d'industrie stables (Rumelt 1991, secondaire). Environ la moitié des établissements nouveaux survivent cinq ans (Mauboussin 2016, lu).
+- **Une entreprise est un marché biface quand un intermédiaire sépare deux groupes qui s'influencent** (Rysman 2009, secondaire). Les magazines allemands subventionnent les lecteurs et tirent l'essentiel de leurs recettes des annonceurs (Kaiser 2006, secondaire). Ce que le modèle standard implique dépend de la façon dont les utilisateurs diffèrent (Weyl 2010, secondaire).
+- **L'adaptation ajoute demande et coûts, et peut éroder la différence.** La variété des libraires en ligne a ajouté 731 millions à 1,03 milliard de dollars de bien-être en 2000 (Brynjolfsson 2003, secondaire). L'effet moyen d'un plus grand choix sur la décision est pratiquement nul (Scheibehenne 2010, secondaire). Les entreprises qui accordent chaîne logistique et type de variété font mieux (Randall 2001, secondaire). Exploiter les historiques d'achat peut éroder la différenciation (Zhang 2011p, secondaire). Aucune étude de terrain sur la personnalisation et la rivalité n'a été trouvée.
+
+## La référence
+
+**B1** est un marché dimensionné par deux méthodes avec intervalles, et un cadre de concurrence en quatre questions ([référence](evidence/market-structure/baseline.md)).
+
+- une taille ascendante par segments et une taille descendante à partir d'un marché publié et d'une part, chaque entrée étant un intervalle marqué PROVISIONAL, calculées par `checks/local/market_size.py` ;
+- l'écart entre les deux rapporté, et la prémisse qui l'explique nommée ;
+- quatre questions sur la concurrence : le nombre de rivaux, le coût de copier une différence, le coût de changer, et si l'entreprise est biface.
+
+Il lui manque une erreur mesurée, des poids pour combiner les deux tailles, et le côté coût de la variété.
+
+## Questions auxquelles la revue a répondu
 
 - **Taille.** À quelle distance tombent les tailles descendante et ascendante, et quelles hypothèses expliquent l'écart ?
 - **Fossé.** Quelles différences un concurrent peut-il copier, et que dit la littérature de ce qui dure ?
@@ -102,7 +118,9 @@ master construit aussi le site, [tewf.github.io/business-market](https://tewf.gi
 
 | Partie | Résumé |
 |---|---|
+| [evidence](evidence/) | la première revue, sur la structure de marché : cinq étapes, 40 sources, une référence nommée |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
+| [checks/local](checks/local/market_size.py) | un programme qui dimensionne un marché par le bas sous forme d'intervalle et place une taille descendante à côté, avec ses tests |
 
 ## Licence
 
