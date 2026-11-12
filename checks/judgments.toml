@@ -60,3 +60,24 @@ path = "evidence/market-structure/state-of-the-art.md"
 question = "the name 'state' and the opening are far apart in meaning (0.01): does the name predict the content?"
 file = "c4af1453473f"
 answer = "Yes: the name is the review genre's name for step 3, `State of the art`, and the opening says what it holds, the best evidence per question; the low similarity comes from the short name."
+
+[[answer]]
+check = "co-change"
+path = "AGENTS.md"
+question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "e4f623f1bbc2"
+answer = "They stay apart: `AGENTS.md` and `decisions/README.md` share no fact. Both hold a link to the standard at its pinned commit, so every pin move rewrites both in one commit; the standard-pin and standard-links checks keep those copies equal, so the coupling is the pin's, not the files'."
+
+[[answer]]
+check = "co-change"
+path = "README.fr.md"
+question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "e45a980f13b2"
+answer = "They stay apart: `README.fr.md` and `decisions/README.md` share no fact. Both hold a link to the standard at its pinned commit, so every pin move rewrites both in one commit; the standard-pin and standard-links checks keep those copies equal, so the coupling is the pin's, not the files'."
+
+[[answer]]
+check = "co-change"
+path = "README.md"
+question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "485bc1b5120c"
+answer = "They stay apart: `README.md` and `decisions/README.md` share no fact. Both hold a link to the standard at its pinned commit, so every pin move rewrites both in one commit; the standard-pin and standard-links checks keep those copies equal, so the coupling is the pin's, not the files'."
